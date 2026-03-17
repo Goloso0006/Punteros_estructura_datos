@@ -5,11 +5,11 @@ Notifications are stored manually in a singly linked list.
 
 ## Project Structure
 
-- `main.py`: Entry point. Reads messages from terminal, stores them, prints the linked list, and opens the GUI.
+- `main.py`: Entry point. Launches the Tkinter interface.
 - `notification_system.py`: Service class that controls notification operations.
 - `models/notification_node.py`: Node class with value and next pointer.
 - `models/notification_linked_list.py`: Manual singly linked list implementation.
-- `ui/notification_viewer.py`: Tkinter read-only interface for viewing notifications.
+- `ui/notification_viewer.py`: Basic Tkinter interface for adding and viewing notifications.
 
 ## How to Run
 
@@ -20,7 +20,8 @@ Notifications are stored manually in a singly linked list.
 python main.py
 ```
 
-3. Enter notification messages in terminal.
-4. Press ENTER on an empty line to stop input.
-5. The console prints the linked list traversal and pointer references.
-6. The Tkinter window opens and displays only the stored notifications.
+On Windows, `main.py` relaunches itself with `pythonw.exe` automatically, so the app runs without console interaction.
+
+3. In the Tkinter window, write a notification in the input box.
+4. Click **Add** (or press ENTER) to store it in the singly linked list.
+5. The viewer updates and shows each node with its `next` pointer reference.
